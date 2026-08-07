@@ -75,7 +75,33 @@ modules/01-javaSE/project/   → 每加一个功能  feat(project):
 
 日常流程：写代码/笔记 → 本地验证（编译、运行）→ `git add` 相关文件 → `git commit` → 当天收尾 `git push`（如配置了远程）。
 
-## 六、回看历史
+## 六、目录与包命名规范（练习代码）
+
+练习目录统一使用英文包名格式：**目录名 = 包名**，每个 Java 文件第一行必须声明对应的 `package`。
+
+| 目录 | package 声明 | 用途 |
+|---|---|---|
+| `exercises/lesson01/` | `package lesson01;` | 第 1 课练习 |
+| `exercises/lesson01/solutions/` | `package lesson01.solutions;` | 第 1 课参考答案（子包） |
+| `exercises/lessonNN/` | `package lessonNN;` | 后续课程依此类推 |
+
+规则：
+
+1. 目录名只用小写字母 + 数字（`lesson01`），**禁止中文、连字符、空格**——包名必须是合法 Java 标识符
+2. 每个 `.java` 文件第一行写 `package lessonXX;`，与所在目录一一对应
+3. 参考答案放入 `solutions/` 子目录并使用子包 `lessonXX.solutions`，避免与练习文件中的类重名（如 `Student`）
+4. 所有课程目录共存于同一个源码根（`exercises`），无需手动切换 IDEA 源码根
+5. 运行命令使用全限定名：`java -cp out lesson02.Exercise01`
+6. 目录改名、加包属于结构调整，提交类型用 `chore(exercises):`
+
+示例：
+
+```
+chore(exercises): 练习目录重构为包结构（lesson01 ~ lesson05）
+feat(exercises): 完成 OOP 练习并加包 lesson02
+```
+
+## 七、回看历史
 
 每周用一次 `git log --oneline --graph` 回顾本周提交，检查：
 

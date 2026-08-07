@@ -1,7 +1,9 @@
+package lesson02;
+
 /**
  * 练习 3：抽象类、接口、多态
  * 配套笔记：notes/02-面向对象.md 第 9~10 节
- *
+ * <p>
  * 题目：补全 Circle、Rectangle 类（继承 Shape 并实现 Drawable），完成 main 中的测试。
  */
 public class Exercise03 {

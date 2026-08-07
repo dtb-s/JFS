@@ -1,3 +1,5 @@
+package lesson01;
+
 /**
  * 练习 3：数组
  * 配套笔记：notes/01-语言基础.md 第 6 节

@@ -1,7 +1,9 @@
+package lesson02;
+
 /**
  * 练习 2：继承、重写、多态
  * 配套笔记：notes/02-面向对象.md 第 5~6 节
- *
+ * <p>
  * 题目：补全 Dog、Cat 类（继承 Animal），并完成 main 中的测试。
  */
 public class Exercise02 {

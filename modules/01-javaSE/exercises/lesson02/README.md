@@ -1,6 +1,7 @@
 # 02-OOP练习
 
 > 配套笔记：`modules/01-javaSE/notes/02-面向对象.md`
+> 本目录包名：`lesson02`（参考答案在子包 `lesson02.solutions`）
 
 ## 流程
 
@@ -15,16 +16,24 @@
 在 PowerShell 中先进入本目录：
 
 ```powershell
-cd modules\01-javaSE\exercises\02-OOP练习
-javac -encoding UTF-8 Exercise01.java
-java Exercise01
+cd modules\01-javaSE\exercises\lesson02
+javac -encoding UTF-8 -d out Exercise01.java
+java -cp out lesson02.Exercise01
+```
+
+运行参考答案：
+
+```powershell
+javac -encoding UTF-8 -d out solutions\Solution01.java
+java -cp out lesson02.solutions.Solution01
 ```
 
 注意：
 
 - 必须加 `-encoding UTF-8`（源文件里有中文注释）
-- 如果运行输出中文乱码，先执行 `chcp 65001` 再运行
+- 加包后，运行命令要用"包名.类名"：`lesson02.Exercise01`
 - 一个练习文件里可能包含多个类，编译时只写包含 `main` 的那个文件名即可，javac 会自动编译同文件的其他类
+- 如果运行输出中文乱码，先执行 `chcp 65001` 再运行
 
 ## 规则
 
