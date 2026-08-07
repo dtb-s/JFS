@@ -4,6 +4,7 @@
 .vscode/
 
 # Java 构建产物
+out/
 target/
 *.class
 
@@ -19,3 +20,6 @@ Thumbs.db
 # 本地环境变量
 .env
 .env.local
+
+# JUnit 独立 jar（lesson11 练习用，README 里有下载命令）
+exercises/lesson11/lib/

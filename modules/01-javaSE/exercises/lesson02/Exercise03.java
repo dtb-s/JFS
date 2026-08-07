@@ -15,12 +15,21 @@ public class Exercise03 {
         // 预期输出：
         // 这是一个圆形，面积 78.53981633974483
         // 这是一个矩形，面积 24.0
-
+        Circle circle = new Circle(5);
+        Rectangle rectangle = new Rectangle(4, 6);
+        Shape shape[] = {circle, rectangle};
+        for (Shape c : shape) {
+            c.describe();
+        }
         // TODO 2：接口多态
         // 创建 Drawable 数组，装入 circle 和 rectangle
         // 循环调用 draw()，预期输出：
         // 画一个圆
         // 画一个矩形
+        Drawable drawable[] = {circle, rectangle};
+        for (Drawable c : drawable) {
+            c.draw();
+        }
     }
 }
 
@@ -37,6 +46,7 @@ abstract class Shape {
     void describe() {
         System.out.println("这是一个" + name + "，面积 " + area());
     }
+
 }
 
 // 接口：已有定义，直接使用
@@ -49,8 +59,24 @@ interface Drawable {
 // 2. 构造方法：super("圆形")，接收 radius
 // 3. 重写 area()：Math.PI * radius * radius
 // 4. 重写 draw()：打印"画一个圆"
-class Circle {
+class Circle extends Shape implements Drawable {
     // 你的代码
+    private double radius;
+
+    Circle(double radius) {
+        super("circle");
+        this.radius = radius;
+    }
+
+    @Override
+    public double area() {
+        return Math.PI * this.radius * this.radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("draw a circle");
+    }
 }
 
 // TODO：Rectangle 继承 Shape 实现 Drawable
@@ -58,6 +84,24 @@ class Circle {
 // 2. 构造方法：super("矩形")，接收 width、height
 // 3. 重写 area()：width * height
 // 4. 重写 draw()：打印"画一个矩形"
-class Rectangle {
+class Rectangle extends Shape implements Drawable {
     // 你的代码
+    private double width;
+    private double height;
+
+    Rectangle(double width, double height) {
+        super("rectangle");
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double area() {
+        return this.height * this.width;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("draw a rectangle");
+    }
 }

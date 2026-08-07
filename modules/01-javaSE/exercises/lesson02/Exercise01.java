@@ -25,7 +25,7 @@ public class Exercise01 {
         s1.setAge(-5);
         // 再给 s1 设置年龄 25，打印 getAge()，预期：25
         s1.setAge(25);
-        s1.getAge();
+        System.out.println(s1.getAge());
         // TODO 5（选做）：继续测试
         // 给 s1 设置年龄 200，预期打印：年龄不合法：200
         s1.setAge(200);
@@ -47,7 +47,7 @@ class Student {
     private int age;
 
     Student() {
-        this("unkonwn", 0);
+        this("unknown", 0);
     }
 
     Student(String name, int age) {
@@ -57,7 +57,7 @@ class Student {
 
     public void setAge(int age) {
         if (age < 0 || age > 150) {
-            System.out.println("invaild age");
+            System.out.println("invalid age");
             return;
         } else {
             this.age = age;

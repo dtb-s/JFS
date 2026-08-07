@@ -32,8 +32,9 @@ public class Exercise02 {
         // TODO 4（选做）：类型判断
         // 把 cat 直接强转成 Dog 并调用 fetch()，观察运行时报错
         // 做完记得把报错的那行注释掉，保持程序能正常运行
-        Dog d2 = (Dog) a2;
-        d2.fetch();
+        // 观察完报错后按题目要求注释掉，保证程序正常运行
+        // Dog d2 = (Dog) a2;
+        // d2.fetch();
     }
 
     // TODO：补全这个方法，使任意 Animal 子类都能传进来并正确发声
