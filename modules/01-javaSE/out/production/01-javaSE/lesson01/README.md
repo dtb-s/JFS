@@ -1,6 +1,7 @@
 # 01-语法练习
 
 > 配套笔记：`modules/01-javaSE/notes/01-语言基础.md`
+> 本目录包名：`lesson01`（参考答案在子包 `lesson01.solutions`）
 
 ## 流程
 
@@ -15,14 +16,22 @@
 在 PowerShell 中先进入本目录：
 
 ```powershell
-cd modules\01-javaSE\exercises\01-语法练习
-javac -encoding UTF-8 Exercise01.java
-java Exercise01
+cd modules\01-javaSE\exercises\lesson01
+javac -encoding UTF-8 -d out Exercise01.java
+java -cp out lesson01.Exercise01
+```
+
+运行参考答案：
+
+```powershell
+javac -encoding UTF-8 -d out solutions\Solution01.java
+java -cp out lesson01.solutions.Solution01
 ```
 
 注意：
 
 - 必须加 `-encoding UTF-8`（源文件里有中文注释）
+- 加包后，运行命令要用"包名.类名"：`lesson01.Exercise01`
 - 如果运行输出中文乱码，先执行 `chcp 65001` 再运行
 
 ## 规则
